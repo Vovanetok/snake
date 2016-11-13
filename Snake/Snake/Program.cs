@@ -11,20 +11,24 @@ namespace Snake
     {
         static void Main(string[] args)
         {
-            //Console.SetBufferSize(80, 25);
+
+            Console.SetWindowSize(80, 25);
+            Console.SetBufferSize(80, 25);
+            //Console.SetWindowPosition(81, 26);
 
             
             Walls walls = new Walls(80, 25);
             walls.Draw();
 
-            
+
+
 
             //отрисовка точек
-            Point p = new Point(4, 5, '*');
+        Point p = new Point(4, 5, '*');
             Snake snake = new Snake(p, 4, Direction.RIGHT);
             snake.Draw();
 
-            FoodCreator foodCreator = new FoodCreator(77, 23, '$');
+            FoodCreator foodCreator = new FoodCreator(70, 20, '$');
             Point food = foodCreator.CreateFood();
             food.Draw();
 

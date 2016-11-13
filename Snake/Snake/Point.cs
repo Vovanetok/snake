@@ -57,8 +57,13 @@ namespace Snake
 
         public void Draw()
         {
-            Console.SetCursorPosition(x, y);
-            Console.Write(sym);
+            if (x > 0 && x < 80 && y > 0 && y < 25)
+            {
+                Console.SetCursorPosition(x, y);
+                Console.Write(sym);
+                Console.SetCursorPosition(0, 0);
+            }
+        
         }
         public void Clear()
         {
